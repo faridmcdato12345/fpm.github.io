@@ -1,0 +1,273 @@
+@import url("https://fonts.googleapis.com/css2?family=Germania+One&family=Uncial+Antiqua&display=swap");
+body {
+  font-family: "Germania One", system-ui;
+  background-color: #2e3537;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  color: #3b3b3b;
+}
+.book {
+  width: 350px;
+  height: 450px;
+  position: relative;
+  transition-duration: 1s;
+  /* overflow-y: hidden;
+  overflow-x: visible; */
+}
+input {
+  display: none;
+}
+.cover {
+  /* background-image: url("/images/cover.jpg");
+  background-size: 100% 100%; */
+  width: 100%;
+  height: 100%;
+  border-radius: 0 15px 15px 0;
+  box-shadow: 0 0 5px rgb(41, 41, 41);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform-origin: center left;
+  /* backface-visibility: hidden; */
+}
+.front-cover {
+  position: absolute;
+  background-image: url("/images/cover.jpg");
+  background-size: 100% 100%;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+}
+.backs-cover {
+  position: absolute;
+  top: 0;
+  z-index: 4;
+  background-color: rgb(133, 65, 33);
+  width: 100%;
+  height: 100%;
+}
+.back-cover {
+  position: absolute;
+  background-image: url("/images/cover.jpg");
+  background-size: 100% 100%;
+  width: 100%;
+  height: 100%;
+  border-radius: 0 15px 15px 0;
+  box-shadow: 0 0 5px rgb(41, 41, 41);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform-origin: center left;
+}
+.cover {
+  position: absolute;
+  z-index: 5;
+  transition: transform 1s;
+}
+.cover label {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+.back-cover {
+  position: relative;
+  z-index: -1;
+}
+.page {
+  position: absolute;
+  background-color: white;
+  width: 330px;
+  height: 430px;
+  border-radius: 0 15px 15px 0;
+  margin-top: 10px;
+  transform-origin: left;
+  transform-style: preserve-3d;
+  transform: rotateY(0deg);
+  transition-duration: 1.5s;
+}
+.page img {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px 0 0 15px;
+}
+.front-page,
+.exp-page {
+  position: absolute;
+  background-image: url("/images/ancient-paper-bg.png");
+  background-size: 100% 100%;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  box-sizing: border-box;
+  padding: 1rem;
+  overflow: hidden;
+}
+.back-page {
+  transform: rotateY(180deg);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  z-index: 99;
+}
+.next,
+.prev {
+  position: absolute;
+  cursor: pointer;
+  top: 64%;
+}
+.next {
+  right: 1em;
+}
+.prev {
+  left: 1em;
+}
+#page1 {
+  z-index: 3;
+}
+#page2 {
+  z-index: 2;
+}
+#page3 {
+  z-index: 1;
+}
+#checkbox-cover:checked ~ .book {
+  transform: perspective(100px) translate3d(10px, 0px, 77px);
+  /* width: 91vw;
+  height: 100vh; */
+}
+
+#checkbox-cover:checked ~ .book .cover {
+  transition: transform 2s, z-index 0.5s 0.5s;
+  transform: rotateY(-180deg);
+  z-index: 1;
+}
+
+#checkbox-cover:checked ~ .book .front-page {
+  display: flex;
+  align-items: center;
+}
+
+#checkbox-cover:checked ~ .book .cover .backs-cover {
+  transition: transform 1.5s, z-index 0.5s 0.5s;
+  transform: rotateY(-180deg);
+  z-index: -1;
+}
+#checkbox-cover:checked ~ .book .page {
+  box-shadow: 0 0 3px rgb(99, 98, 98);
+  /* transform: translateY(30px); */
+  /* width: 84vw;
+  height: 90vh; */
+}
+#checkbox-page1:checked ~ .book #page1 {
+  transform: rotateY(-180deg);
+  z-index: 2;
+}
+
+#checkbox-page2:checked ~ .book #page2 {
+  transform: rotateY(-180deg);
+  z-index: 3;
+}
+#checkbox-page2:checked ~ .book #page3 .front-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.front-page img {
+  transform: rotateY(45deg);
+  filter: brightness(0.86) contrast(1);
+  position: relative;
+  z-index: 9;
+}
+.front-page div img {
+  border-radius: 30px;
+}
+.front-page .dp-container {
+  position: absolute;
+  width: 75px;
+  height: 55px;
+  top: 43%;
+  left: 11.7%;
+  border-radius: 10px;
+  z-index: 1;
+}
+.frame-container {
+  width: 40%;
+}
+.text-container {
+  width: 60%;
+}
+.bold-text {
+  font-weight: bolder;
+}
+@keyframes blink {
+  0%,
+  100% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: black;
+  }
+}
+.typewriter {
+  animation: blink 0.5s step-end infinite;
+}
+#checkbox-cover:checked ~ .book #page1 p {
+  font-size: 0.5rem;
+}
+#checkbox-page1:checked ~ .book #page2 p {
+  font-size: 0.5rem;
+  text-align: justify;
+}
+.exp-container {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #3b3b3b;
+}
+.exp-container h5 {
+  font-size: 0.5rem;
+}
+.exp-container p,
+.exp-container li {
+  font-size: 0.3rem;
+}
+.exp-container li {
+  list-style: georgian;
+}
+.sub-content {
+  display: flex;
+  width: 100%;
+}
+.exp-container .exp-title {
+  width: 30%;
+}
+.exp-details {
+  width: 70%;
+}
+.exp-details p,
+.exp-title p {
+  margin-top: 0;
+}
+h5,
+.sub-content p {
+  margin-bottom: 3px;
+}
+.content-title {
+  font-weight: bold;
+}
+.tech-stack p {
+  list-style: upper-roman inside none;
+  display: list-item;
+  margin-left: 2px;
+}
+.tech-stack {
+  align-items: center;
+}
+.exp-container:nth-child(2) {
+  border-bottom: none;
+  margin-top: 0.5rem;
+}

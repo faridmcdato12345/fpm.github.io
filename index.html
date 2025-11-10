@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Book</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <input type="checkbox" id="checkbox-cover">
+    <input type="checkbox" id="checkbox-page1">
+    <input type="checkbox" id="checkbox-page2">
+    <input type="checkbox" id="checkbox-page3">
+    <div class="book">
+        <div class="cover">
+            <label for="checkbox-cover">
+                <div class="front-cover"></div>
+                <!-- <div class="backs-cover"></div> -->
+            </label>
+        </div>
+        <div class="page" id="page1">
+            <div class="front-page">
+                <div class="frame-container">
+                    <img src="/images/frame.png" alt="">
+                    <div class="dp-container">
+                        <img src="/images/dp.jpg" alt="">
+                    </div>
+                </div>
+                <div class="text-container">
+                    <p><span class="bold-text">Behold!</span> Witness the Craft of "FARID", Artisan of Code and Design.
+                    </p>
+                    <div class="typewriter">
+                        <p id="typewriter-text">By my hand, the web transforms — elegant, functional, and enduring
+                            through the sands of time.</p>
+                    </div>
+
+                    <label class="next" for="checkbox-page1">about</label>
+                </div>
+
+            </div>
+            <div class="back-page">
+                <img src="/images/ancient-paper-bg.png">
+                <label class="prev" for="checkbox-page1">prev</label>
+            </div>
+        </div>
+        <div class="page" id="page2">
+            <div class="front-page">
+                <p>"Hark! A venerable artisan of the digital craft, seasoned by more than five years of toil in the
+                    digital forge. A sage in the arcane arts of code, adept at unraveling the most perplexing riddles of
+                    technical strife. With an eye as sharp as a falcon's and a mind orderly as the constellations, this
+                    meticulous worker weaves solutions with care and precision. Swift of hand and fleet of thought, ever
+                    striving to conquer pressing deadlines. A stalwart companion in any fellowship, eager to lend skill
+                    and spirit to the triumph of the realm."</p>
+                <label class="next" for="checkbox-page2">experience</label>
+            </div>
+            <div class="back-page">
+                <img src="/images/ancient-paper-bg.png">
+                <label class="prev" for="checkbox-page2">prev</label>
+            </div>
+        </div>
+        <div class="page" id="page3">
+            <div class="front-page">
+                <div class="exp-container">
+                    <div class="exp-title">
+                        <h5>
+                            FREELANCE FULLSTACK SOFTWARE DEVELOPER
+                        </h5>
+                        <p>&lt;June 2024 - Aug 2024&gt;</p>
+                    </div>
+                    <div class="exp-details">
+                        <div class="sub-content">
+                            <p class="content-title">Project:</p>
+                            <p class="content-detail">Point of Sale and Inventory Management System</p>
+                        </div>
+                        <div class="sub-content">
+                            <p class="content-title">Client:</p>
+                            <p class="content-detail">Local Store Owner</p>
+                        </div>
+                        <div class="sub-content">
+                            <p class="content-title">Description:</p>
+                            <p class="content-detail">Developed software that helps the owner track their store products. It resulted in
+                                more efficient financial management.</p>
+                        </div>
+                        <div class="sub-content">
+                            <p class="content-title">Features:</p>
+                            <p class="content-detail">Authentication, report printing, invoice/receipt printing via thermal printer. </p>
+                        </div>
+                        <div class="sub-content tech-stack">
+                            <p>Laravel</p>
+                            <p>VueJS</p>
+                            <p>InertiaJS</p>
+                            <p>TailwindCSS</p>
+                            <p>SQlite</p>
+                            <p>Laravel HERD</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="exp-container">
+                    <div class="exp-title">
+                        <h5>
+                            FREELANCE FULLSTACK WEB DEVELOPER 
+                        </h5>
+                        <p>&lt;Jan 2024 - May 2024&gt;</p>
+                    </div>
+                    <div class="exp-details">
+                        <div class="sub-content">
+                            <p class="content-title">Project:</p>
+                            <p class="content-detail">Mental Awareness Application</p>
+                        </div>
+                        <div class="sub-content">
+                            <p class="content-title">Client:</p>
+                            <p class="content-detail">Adam Software</p>
+                        </div>
+                        <div class="sub-content">
+                            <p class="content-title">Description:</p>
+                            <p class="content-detail">Developed a web application / Progressive Web Application (PWA) that helps the user
+                                mental problem.</p>
+                        </div>
+                        <div class="sub-content">
+                            <p>Features:</p>
+                            <p class="content-detail">Authentication, Real time notification, theme customization, charts, mobile installation
+                                and subscription payment.</p>
+                        </div>
+                        <div class="sub-content tech-stack">
+                            <p>Laravel</p>
+                            <p>VueJS</p>
+                            <p>InertiaJS</p>
+                            <p>TailwindCSS</p>
+                            <p>MySQL</p>
+                            <p>GitHub</p>
+                            <p>Cloudways Hosting</p>
+                            <p>Laravel HERD</p>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- <div class="exp-container">
+                    <div>
+                        <h5>
+                            FULLSTACK SOFTWARE DEVELOPER &lt;Oct 2019 - Dec 2023&gt;
+                        </h5>
+                    </div>
+                    <div>
+                        <div>
+                            <p>Company:</p>
+                            <p>Lanao del Sure Electric Cooperative (LASURECO)</p>
+                        </div>
+                        <ul>
+                            <li>Lead a team of 4 developers in designing and developing the Electronic Billing System (EBS) for the company, resulting in more efficient, accurate and uncorrupted calculation of income. </li>
+                            <li>Developed the Warehouse/Inventory Management System. It helps to track the ins and outs of all the company’s equipment.</li>
+                            <li>Developed Queuing Management System that results in more organized way of payment on the company`s paying centers.</li>
+                            <li>Developed Gas Slip Tracking System. It helps the company to track the employee`s gas benefits that results in uncorrupted gas consumption.</li>
+                            <li>Collaborate with GCash one of Philippine mobile payment service to help the company`s collection payment easer and accessible. It resulted in a 30% increase in collections.</li>
+                            <li>Developed Human Resource Management System with Biometric that helps to track employee`s attendance. It resulted in making the company more productive.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p>Laravel</p>
+                        <p>Blade</p>
+                        <p>Javascript</p>
+                        <p>HTML</p>
+                        <p>CSS</p>
+                        <p>MySQL</p>
+                        <p>GitHub</p>
+                    </div>
+                </div> -->
+                <!-- <div class="exp-container">
+                    <div>
+                        <h5>
+                            WORDPRESS DEVELOPER &lt;Feb 2017 - Aug 2019&gt;
+                        </h5>
+                    </div>
+                    <div>
+                        <div>
+                            <p>Company:</p>
+                            <p>CONTENTING</p>
+                        </div>
+                        <ul>
+                            <li>Developed and maintained responsive websites using wordpress page builder.</li>
+                            <li>Collaborated with UX/UI designers to optimize website interfaces, leading to a 15% improvement in user engagement metrics.</li>
+                            <li>Implemented SEO best practices, leading to a 20% increase in organic search traffic.</li>
+                            <li>Collaborated with project manager to deliver projects on time.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p>PHP</p>
+                        <p>Wordpress</p>
+                        <p>Javascript</p>
+                        <p>HTML</p>
+                        <p>CSS</p>
+                        <p>CPanel</p>
+                        <p>FileZilla</p>
+                    </div>
+                </div>
+                <div class="exp-container">
+                    <div>
+                        <h5>
+                            FREELANCE FULLSTACK SOFTWARE DEVELOPER &lt;July 2016 - Sept 2016&gt;
+                        </h5>
+                    </div>
+                    <div>
+                        <div>
+                            <p>Project:</p>
+                            <p>Pharmacy Inventory Management System</p>
+                        </div>
+                        <div>
+                            <p>Client:</p>
+                            <p>SALAAM HOSPITAL</p>
+                        </div>
+                        <div>
+                            <p>Description:</p>
+                            <p>Developed software that tracks the inventory of pharmacy.</p>
+                        </div>
+                        <div>
+                            <p>Features:</p>
+                            <p>Authentication, print report, create, edit, delete</p>
+                        </div>
+                    </div>
+                    <div>
+                        <p>Laravel</p>
+                        <p>Bootstrap</p>
+                        <p>HTML</p>
+                        <p>CSS</p>
+                        <p>Javascript</p>
+                    </div>
+                </div>
+                <div class="exp-container">
+                    <div>
+                        <h5>
+                            WEB DEVELOPER SUPPORT &lt;Dec 2015 - June 2016&gt;
+                        </h5>
+                    </div>
+                    <div>
+                        <div>
+                            <p>Company:</p>
+                            <p>COMELEC</p>
+                        </div>
+                        <ul>
+                            <li>Added feature on agency website like precinct finder that helps the election voter to find their voting precinct.</li>
+                            <li>Collaborated with UX/UI designers to optimize website interfaces.</li>
+                            <li>Collaborated with lead developer to deliver projects on time.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p>PHP</p>
+                        <p>Javascript</p>
+                        <p>HTML</p>
+                        <p>CSS</p>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+        <div class="back-cover"></div>
+    </div>
+    <!-- <script src="/js/script.js"></script> -->
+</body>
+
+</html>
